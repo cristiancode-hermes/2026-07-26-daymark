@@ -1,0 +1,18 @@
+{
+  "name": "daymark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daymark — Daily Reflection & Mood Journal",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "build:api": "cd apps/api && npm run build",
+    "build:web": "cd apps/web && npm run build",
+    "build": "npm run build:api && npm run build:web"
+  },
+  "dependencies": {
+    "zone.js": "^0.16.2"
+  }
+}
