@@ -7,7 +7,7 @@ import { ToastContainerComponent } from './shared/toast.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, DatePipe, ToastContainerComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, ToastContainerComponent],
   template: `
     @if (authService.isAuthenticated()) {
       <header class="app-header">
@@ -42,9 +42,10 @@ import { ToastContainerComponent } from './shared/toast.component';
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 24px;
-      border-bottom: 1px solid var(--color-border);
-      background: var(--color-bg);
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--color-border-light);
+      background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+      backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -55,19 +56,20 @@ import { ToastContainerComponent } from './shared/toast.component';
       gap: 32px;
     }
     .logo {
-      font-size: var(--text-h2);
-      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
       color: var(--color-accent);
       text-decoration: none;
       letter-spacing: -0.02em;
     }
     .nav-links {
       display: flex;
-      gap: 8px;
+      gap: 4px;
     }
     .nav-links a {
-      padding: 6px 12px;
-      border-radius: var(--radius-sm);
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
       color: var(--color-ink-secondary);
       font-size: var(--text-body-sm);
       font-weight: 500;
@@ -80,7 +82,8 @@ import { ToastContainerComponent } from './shared/toast.component';
     }
     .nav-links a.active {
       color: var(--color-accent);
-      background: var(--color-accent-muted);
+      background: var(--color-accent-soft);
+      font-weight: 600;
     }
     .header-right {
       display: flex;

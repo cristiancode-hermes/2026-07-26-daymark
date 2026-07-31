@@ -27,26 +27,29 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
       cursor: pointer;
       border: none;
       border-radius: var(--radius-md);
-      transition: background-color 150ms, color 150ms, box-shadow 150ms, opacity 150ms;
+      transition: background-color 150ms, color 150ms, box-shadow 150ms, opacity 150ms, transform 150ms;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: var(--space-sm);
       line-height: 1.4;
     }
+    button:active:not(:disabled) { transform: translateY(1px); }
     button:disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
     .btn-size-sm { padding: 6px 12px; font-size: var(--text-body-sm); }
-    .btn-size-md { padding: 8px 16px; font-size: var(--text-body); }
-    .btn-size-lg { padding: 10px 20px; font-size: var(--text-h3); }
+    .btn-size-md { padding: 9px 18px; font-size: var(--text-body-sm); }
+    .btn-size-lg { padding: 12px 24px; font-size: var(--text-body); }
     .btn-primary {
       background: var(--color-accent);
       color: #fff;
+      box-shadow: 0 2px 6px rgba(180, 82, 29, 0.25);
     }
     .btn-primary:hover:not(:disabled) {
       background: var(--color-accent-hover);
+      box-shadow: 0 4px 12px rgba(180, 82, 29, 0.3);
     }
     .btn-secondary {
       background: var(--color-surface);

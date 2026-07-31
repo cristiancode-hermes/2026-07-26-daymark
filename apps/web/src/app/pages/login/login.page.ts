@@ -76,22 +76,26 @@ import { SpinnerComponent } from '../../shared/spinner.component';
       padding: var(--space-md);
     }
     :host-context(app-root) app-card {
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
+      box-shadow: var(--shadow-3);
     }
     .auth-header {
       text-align: center;
-      margin-bottom: var(--space-lg);
+      margin-bottom: var(--space-xl);
     }
     .auth-header h1 {
+      font-family: var(--font-display);
       font-size: var(--text-display);
-      font-weight: 700;
+      font-weight: 600;
       color: var(--color-accent);
       margin-bottom: var(--space-xs);
+      letter-spacing: -0.02em;
     }
     .auth-subtitle {
       font-size: var(--text-body-sm);
       color: var(--color-ink-secondary);
+      font-style: italic;
     }
     .auth-form {
       display: flex;
@@ -111,17 +115,17 @@ import { SpinnerComponent } from '../../shared/spinner.component';
     .form-group input {
       font-family: var(--font-primary);
       font-size: var(--text-body);
-      padding: 10px 12px;
+      padding: 11px 14px;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: var(--color-bg);
+      background: var(--color-surface);
       color: var(--color-ink);
       outline: none;
       transition: border-color 150ms, box-shadow 150ms;
     }
     .form-group input:focus {
       border-color: var(--color-accent);
-      box-shadow: 0 0 0 3px var(--color-accent-muted);
+      box-shadow: 0 0 0 3px var(--color-accent-soft);
     }
     .auth-error {
       font-size: var(--text-body-sm);

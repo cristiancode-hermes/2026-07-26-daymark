@@ -33,7 +33,7 @@ import { EmptyStateComponent } from '../../shared/empty-state.component';
     } @else {
       <div class="dashboard">
         <header class="page-header">
-          <h1>Tu día</h1>
+          <h1 class="page-title">Tu día</h1>
           <p class="date-text">{{ todayDate }}</p>
         </header>
 
@@ -134,8 +134,19 @@ import { EmptyStateComponent } from '../../shared/empty-state.component';
   styles: [`
     .dashboard { display: flex; flex-direction: column; gap: var(--space-lg); }
     .page-header { margin-bottom: var(--space-sm); }
-    .page-header h1 { font-size: var(--text-h1); font-weight: 700; color: var(--color-ink); }
-    .date-text { font-size: var(--text-body-sm); color: var(--color-ink-secondary); }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: var(--text-display);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--color-ink);
+    }
+    .date-text {
+      font-size: var(--text-body-sm);
+      color: var(--color-ink-secondary);
+      text-transform: capitalize;
+      margin-top: 4px;
+    }
     .dashboard-grid { display: grid; gap: var(--space-md); grid-template-columns: 1fr 1fr; }
     @media (max-width: 768px) { .dashboard-grid { grid-template-columns: 1fr; } }
     .card-row { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); }
