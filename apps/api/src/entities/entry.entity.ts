@@ -38,7 +38,7 @@ export class Entry {
   content!: Record<string, any> | null;
 
   @ApiProperty({ description: 'Estado de ánimo' })
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'text' })
   mood!: string | null;
 
   @ApiProperty({ description: 'Fecha de creación' })

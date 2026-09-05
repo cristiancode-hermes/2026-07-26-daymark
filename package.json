@@ -8,11 +8,12 @@
     "apps/web"
   ],
   "scripts": {
-    "build:api": "cd apps/api && npm run build",
-    "build:web": "cd apps/web && npm run build",
-    "build": "npm run build:api && npm run build:web"
+    "build:api": "cd apps/api && pnpm run build",
+    "build:web": "cd apps/web && pnpm run build",
+    "build": "pnpm run build:api && pnpm run build:web"
   },
   "dependencies": {
     "zone.js": "^0.16.2"
-  }
+  },
+  "packageManager": "pnpm@10.34.5"
 }

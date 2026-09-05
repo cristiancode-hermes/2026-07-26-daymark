@@ -5,7 +5,7 @@ import { ApiService } from './api.service';
 import { User } from '../interfaces';
 
 interface AuthResponse {
-  token: string;
+  accessToken: string;
   user: User;
 }
 
@@ -59,7 +59,7 @@ export class AuthService {
   }
 
   private setSession(res: AuthResponse): void {
-    localStorage.setItem(this.tokenKey, res.token);
+    localStorage.setItem(this.tokenKey, res.accessToken);
     this.user.set(res.user);
   }
 

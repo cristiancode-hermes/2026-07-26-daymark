@@ -24,7 +24,7 @@ export class Tag {
   name!: string;
 
   @ApiProperty({ description: 'Color hexadecimal' })
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'text' })
   color!: string | null;
 
   @ApiProperty({ description: 'UUID del usuario propietario' })

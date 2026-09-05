@@ -1,6 +1,6 @@
 import { Component, inject, signal, OnInit, DestroyRef } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { DatePipe, SlicePipe } from '@angular/common';
+import { SlicePipe } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { catchError, of } from 'rxjs';
 import { EntriesService } from '../../services/entries.service';
@@ -16,7 +16,7 @@ import { EmptyStateComponent } from '../../shared/empty-state.component';
 @Component({
   selector: 'app-calendar-page',
   standalone: true,
-  imports: [RouterLink, DatePipe, SlicePipe, CardComponent, CalendarDayComponent, StreakBadgeComponent, SpinnerComponent, EmptyStateComponent],
+  imports: [RouterLink, SlicePipe, CardComponent, CalendarDayComponent, StreakBadgeComponent, SpinnerComponent, EmptyStateComponent],
   template: `
     @if (loading()) {
       <app-spinner [size]="40" />

@@ -70,7 +70,7 @@ export class SeedService implements OnModuleInit {
     const user = this.userRepo.create({
       email: 'demo@daymark.app',
       name: 'María Demo',
-      passwordHash,
+      password: passwordHash,
     } as any);
     return this.userRepo.save(user) as unknown as User;
   }

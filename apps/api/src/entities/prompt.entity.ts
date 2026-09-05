@@ -17,7 +17,7 @@ export class Prompt {
   text!: string;
 
   @ApiProperty({ description: 'Categoría del prompt (gratitud, reflexion, etc.)' })
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'text' })
   category!: string | null;
 
   @ApiProperty({ description: 'Si el prompt está activo' })
